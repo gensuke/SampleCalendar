@@ -13,7 +13,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -104,7 +103,6 @@ public class SampleCalendar extends Activity implements OnClickListener {
 					public void onItemSelected(AdapterView<?> parent,
 							View view, int position, long id) {
 						mAlertTime = mAlertTimes[position];
-						Log.d("debag", "time:" + mAlertTime);
 						if (mAlertTime == 0) {
 							mAlert = 0;
 						} else {
@@ -161,8 +159,6 @@ public class SampleCalendar extends Activity implements OnClickListener {
 	 * イベントをカレンダーに登録する
 	 */
 	protected void putEvent() {
-
-		Log.d("debag", "attend");
 
 		final ContentResolver contentResolver = getContentResolver();
 		ContentValues cv = new ContentValues();
@@ -281,7 +277,6 @@ public class SampleCalendar extends Activity implements OnClickListener {
 				do {
 					mCalIds[i] = managedCursor.getInt(idColumnIndex);
 					mCalNames[i] = managedCursor.getString(nameColumnIndex);
-					Log.e("debag", mCalIds[i] + "//" + mCalNames[i]);
 					i++;
 				} while (managedCursor.moveToNext());
 			}
