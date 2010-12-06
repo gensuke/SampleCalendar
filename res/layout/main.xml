@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/calendar"
+			android:layout_height="wrap_content" android:layout_width="wrap_content" />
+		<Spinner android:id="@+id/calendar_spinner"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" />
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/title" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+		<EditText android:id="@+id/title" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_weight="1"
+			android:hint="@string/title" />
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/description"
+			android:layout_height="wrap_content" android:layout_width="wrap_content" />
+		<EditText android:id="@+id/description"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_weight="1" android:hint="@string/description" />
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/address"
+			android:layout_height="wrap_content" android:layout_width="wrap_content" />
+		<EditText android:id="@+id/address" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_weight="1"
+			android:hint="@string/address" />
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/start" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+		<Button android:id="@+id/start_date" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_weight="1" />
+		<Button android:id="@+id/start_time" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_weight="1" />
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/end" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+		<Button android:id="@+id/end_date" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_weight="1" />
+		<Button android:id="@+id/end_time" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_weight="1" />
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:text="@string/alarm" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+		<Spinner android:id="@+id/alert_spinner"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:entries="@array/alert_time" />
+	</LinearLayout>
+
+	<Button android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/attend"
+		android:text="@string/attend" />
+
+</LinearLayout>

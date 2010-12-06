@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">SampleCalendar</string>
+	<string name="calendar">カレンダー</string>
+	<string name="title">タイトル</string>
+	<string name="description">説明</string>
+	<string name="address">住所</string>
+	<string name="start">開示日時</string>
+	<string name="end">終了日時</string>
+	<string name="alarm">通知</string>
+	<string name="attend">イベント登録</string>
+	<string name="start_date">開始日時</string>
+	<string name="end_date">終了日時</string>
+</resources>
