@@ -73,6 +73,7 @@ public class SampleCalendar extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+		initDate();
 		mTitleText = (EditText) findViewById(R.id.title);
 		mDescriptionText = (EditText) findViewById(R.id.description);
 		mAddressText = (EditText) findViewById(R.id.address);
@@ -132,7 +133,6 @@ public class SampleCalendar extends Activity implements OnClickListener {
 		mAlertTimes = getResources().getIntArray(R.array.alert_timevalues);
 
 		setProvName();
-		initDate();
 		myCalendars2Spinner();
 
 	}
@@ -180,6 +180,10 @@ public class SampleCalendar extends Activity implements OnClickListener {
 
 		// 通知機能を使用する場合は1を設定する
 		cv.put("hasAlarm", mAlert);
+
+		// Galaxy対応
+		// cv.put("_sync_account", "aaaa@gmail.com");
+		// cv.put("_sync_account_type", "com.google");
 
 		Uri uri = contentResolver.insert(Uri.parse(eventsProveName), cv);
 
