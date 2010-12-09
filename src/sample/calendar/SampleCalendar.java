@@ -181,12 +181,7 @@ public class SampleCalendar extends Activity implements OnClickListener {
 		// 通知機能を使用する場合は1を設定する
 		cv.put("hasAlarm", mAlert);
 
-		// Galaxy対応
-		// cv.put("_sync_account", "aaaa@gmail.com");
-		// cv.put("_sync_account_type", "com.google");
-
 		Uri uri = contentResolver.insert(Uri.parse(eventsProveName), cv);
-
 		if (mAlert == 1) {
 
 			long eventId = Long.parseLong(uri.getLastPathSegment());
@@ -196,7 +191,6 @@ public class SampleCalendar extends Activity implements OnClickListener {
 			 */
 			cv.clear();
 			cv.put("event_id", eventId);
-			// 通知方法にアラートを指定する（2だとメール?）
 			cv.put("method", 1);
 			// 通知タイミングをイベント開始時間を基準として分単位で指定する
 			cv.put("minutes", mAlertTime);
